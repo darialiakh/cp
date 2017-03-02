@@ -1,0 +1,83 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+ class Holiday     //класс свят
+{
+ private:
+   string name, kind;
+   int date;
+ public:
+   void setName(string name);
+   void setDate(int date);
+   void setKind(string kind);
+   void getName();
+   void getDate();
+   void getKind();
+  };
+
+void Holiday::setName(string name_name)
+{
+ name=name_name;
+}
+void Holiday::setDate(int date_name)
+{
+ date=date_name;
+}
+void Holiday::setKind(string kind_name)
+{
+ kind=kind_name;
+}
+void Holiday::getName()
+{
+ cout<< " Name=" <<name<<";"<<endl;
+}
+void Holiday::getDate()
+{
+ cout<< " Date=" <<date<<";"<<endl;
+}
+void Holiday::getKind()
+{
+ cout<< " Kind=" <<kind<<";"<<endl;
+}
+
+//-------------------------------------------------
+
+int main()
+{
+  string tmp_name, tmp_kind;
+  int tmp_date;
+
+  cout<<"Name of the holiday: ";
+  cin>>tmp_name;
+  cout<<"Date: ";
+  cin>>tmp_date;
+  cout<<"Kind: ";
+  cin>>tmp_kind;
+
+  Holiday Christmas;   //створення об’єкта
+
+
+  Christmas.setName(tmp_name);
+  Christmas.getName();
+  Christmas.setDate(tmp_date);
+  Christmas.getDate();
+  Christmas.setKind(tmp_kind);
+  Christmas.getKind();
+
+/* Holiday* Easter;  //створення вказівника
+ * Easter=new Holiday; //виділення пам’яті під об’єкт
+
+  Easter->setName(tmp_name);  //виклик функції об’єкта *Easter
+  Easter->getName();
+  Easter.setDate(tmp_date);
+  Easter.getDate();
+  Easter.setKind(tmp_kind);
+  Easter.getKind();
+ */
+
+  cin.get();
+  cin.get();
+  return 0;
+}
