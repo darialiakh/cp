@@ -4,7 +4,12 @@ using namespace std;
 
 int main()
 {
-
+   Lion a; // приклад поліморфізму, метод з батьківського класу використовується в похідному
+    a.getName();
+    
+    Tiger b;
+    b.getName();
+   
    int n;
    cout<< "How objects do you want to create? " <<endl;
    cin>>n;
